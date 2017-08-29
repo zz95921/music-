@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0;maximum-scale=1.0;user-scalable=false;width=divice-width" />
+		<title>音乐播放器</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.css"/>
+	</head>
+
+	<body>
+		<!--loop：循环播放-->
+		<audio></audio>
+		<main>
+			<!--背景图-->
+			<div class="bg"></div>
+			<!--蒙板-->
+			<div class="coverView">
+				<!--歌名，歌手-->
+				<section class="title">
+					<h2>知道不知道</h2>
+					<h4>刘若英</h4>
+				</section>
+					
+				<!--头像-->
+				<section class="avatar">
+					<div></div>
+				</section>
+				
+				<!--歌词-->
+				<section class="lrc">
+					<p>暂无歌词</p>
+				</section>
+				
+				<!--播放时间和进度-->
+				<section class="timeControl">
+					<span>00:00</span>
+					<input type="range" onchange="changeTheProgress()"/>
+					<span>04:10</span>
+				</section>
+				
+				<!--播放控制按钮-->
+				<section class="playControl">
+					<img src="img/prev.png" onclick="prev()"/>
+					<img src="img/play.png" onclick="playOrPause()"/>
+					<img src="img/next.png" onclick="next()"/>
+				</section>
+				
+				<!--音量控制-->
+				<section class="volumeControl">
+					<span class="icon-volume-down"></span>
+					<input type="range" />
+					<span class="icon-volume-up"></span>
+				</section>
+				
+			</div>
+
+		</main>
+		
+		<script src="js/lrcs.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+
+</html>

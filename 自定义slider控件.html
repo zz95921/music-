@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>slider</title>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			input{
+				
+				width: 100%;
+				margin: 30px;
+				/*去掉Safari和chrome的默认样式*/
+				/*-webkit-appearance: none;*/
+				outline: none;
+			}
+			/*设置slider的样式*/
+			input::-webkit-slider-runnable-track{
+				
+				background-color: green;
+				height: 2px;
+			}
+			
+			/*设置Safari和chrome上slider的thumb圆点的样式*/
+			input::-webkit-slider-thumb{
+				width: 15px;
+				height: 15px;
+				margin-top: -8px;
+				border-radius: 50%;
+				/*取消圆点的默认样式*/
+				-webkit-appearance: none;
+				border: none;
+				background-color: red;
+			}
+			/*设置Firefox的slider样式*/
+			input::-moz-range-track{
+				
+				background-color: green;
+			}
+			/*设置slider上的圆点样式*/
+			input::-moz-range-thumb{
+				width: 15px;
+				height: 15px;
+				background-color: red;
+				border-radius: 50%;
+				border: none;
+				/*-moz-appearance: none;*/	
+			}
+		</style>
+	</head>
+	<body>
+		<progress value="0.5"></progress>
+		<br />
+		<!--
+			range:默认值0--100
+			
+		-->
+		<input type="range" value="50"  max='150' onchange="getMySliderValue(event) "/>
+		
+		<script type="text/javascript">
+		
+		function getMySliderValue(e){
+			
+			//alert('xxxxx')
+			alert(e.target.value)
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+	box-sizing: border-box;
+}
+html,body{
+	height: 100vh;
+	margin: 0;
+	font-size: 16px;
+	
+}
+.bg{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../img/lry.jpg);
+	background-color: red;
+	/*filter:过滤
+	 blur：添加模糊效果*/
+	filter: blur(0.5rem);
+	-webkit-filter: blur(0.5rem);
+}
+.coverView{
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.6);
+	/*opacity: 0.6;*/
+}
+.title{
+	text-align: center;	
+}
+.title h2,.title h4{
+	color: white;
+	font-style: normal;
+	font-weight: normal;
+}
+.title h2{
+	font-size: 1rem;
+}
+
+.title h4{
+	font-size: 0.8rem;
+}
+.avatar div{
+	
+	width: 12rem;
+	height:12rem;
+	/*background-color: red;*/
+	margin: 1rem auto;
+	border: 5px solid rgba(10,10,10,0.8);
+	border-radius: 50%;
+	background-image: url(../img/lry.jpg);
+	background-size: 100% 100%;
+}
+.lrc p{
+	
+	text-align: center;
+	color: white;
+	font-size: 0.6rem;
+}
+.timeControl{
+	
+	display: flex;
+	align-items: center;
+}
+.timeControl input{
+	flex-grow: 1;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+.timeControl input::-moz-range-track{
+	
+	background-color: green;
+	height: 0.1rem;
+}
+.timeControl input::-moz-range-thumb{
+	
+	width: 1rem;
+	height: 1rem;
+	background-color: green;
+	border: none;
+	border-radius: 50%;
+}
+.timeControl input::-webkit-slider-runnable-track{
+	background-color: green;
+	height: 0.1rem;
+}
+
+.timeControl input::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 1rem;
+	height: 1rem;
+	border: none;
+	margin-top: -0.5rem;
+	background-color: green;
+	border-radius: 50%;
+}
+.timeControl span{
+	
+	font-size: 0.8rem;
+	color: white;
+}
+.playControl{
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.playControl img{
+	
+	margin: 0 0.3rem;
+	transform: scale(0.6);
+}
+.volumeControl{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.volumeControl input{
+	
+	outline: none;
+	-webkit-appearance: none;
+}
+.volumeControl input::-moz-range-track{
+	
+	background-color: green;
+	height: 0.05rem;
+}
+.volumeControl input::-moz-range-thumb{
+	
+	width: 0.6rem;
+	height: 0.6rem;
+	background-color: green;
+	border: none;
+	border-radius: 50%;
+}
+.volumeControl input::-webkit-slider-runnable-track{
+	background-color: green;
+	height: 0.05rem;
+}
+
+.volumeControl input::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 0.6rem;
+	height: 0.6rem;
+	border: none;
+	margin-top: -0.5rem;
+	background-color: green;
+	border-radius: 50%;
+}
+.volumeControl span{
+	
+	color: green;
+}
+
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
